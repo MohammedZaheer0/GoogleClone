@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Practice Google Clone</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            margin-top: 10px;
+          
+        }
+        .header a{
+            display: flex;
+            margin-right: 10px;
+            padding: 10px 5px;
+            text-decoration: none;
+            color: black;
+        }
+        .header a:hover{
+            text-decoration-line: underline;
+        }
+        .header span{
+            display: flex;
+            align-items: center;
+            padding: 0px 3px;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .main{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .main img{
+            height: 300px;
+            object-fit: contain;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            border: 1px solid lightgray;
+            height: 30px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            width: 75vw;
+            margin: 0 auto;
+            margin-top: 20px;
+            max-width: 560px;
+        }
+        .search input{
+            flex: 1;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+        }
+        .search_buttons{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .search_buttons button{
+            margin: 5px;
+            padding: 10px 15px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <span class="material-symbols-outlined">
+            apps
+            </span>
+            <span class="material-symbols-outlined">
+                account_circle
+                </span>
+    </header>
+
+    <!-- Main Body Starts -->
+
+        <div class="main">
+            <img src="google.gif" alt="Google">
+
+        <div class="search">
+            <div class="search_input">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+                    <input type="text" placeholder="">
+                    <span class="material-symbols-outlined">
+                        mic
+                        </span>
+            </div>
+           <div class="search_buttons">
+            <button>Google Search</button>
+            <button>I'm Feeling Luckey</button>
+           </div>
+        </div>
+
+        </div>
+    <!-- Main Body Ends -->
+</body>
+</html>
+

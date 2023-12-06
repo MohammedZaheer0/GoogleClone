@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Below i added a favicon of Google -->
+    <link rel="icon" type="image/x-icon" href="682665_favicon_google_logo_new_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Nanum+Myeongjo:wght@700&family=Noto+Serif+Display:wght@600&family=Noto+Serif:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <title>Google</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        .container{
+            grid-template-areas: 'header' 'section' 'article' 'main' 'footer';
+            display: grid;
+        }
+
+        /* This is Header */
+
+        .header{
+            grid-area: header;
+            grid-template-columns:70px 70px 70px 70px;
+            gap: 10px;
+            float: right;
+            text-align: end;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        .header a{
+            display: inline-block;
+            text-decoration: none;  
+            color: black;
+            padding: 5px;
+            margin: 0 auto;
+            font-size: 14px;
+
+        }
+        a:hover{
+            text-decoration-line: underline;
+            color: black;   
+        }
+        .image:hover{
+            cursor: pointer;
+        }
+       .border{
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin-bottom: -8px;
+        }
+        .color{
+            width: 20px;
+            height: 20px;
+            margin-bottom: -5px;
+        }
+
+    /* This is Section */
+
+        .section{
+            grid-area: section;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 350px;
+            margin-top: 20px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center; 
+            text-align: center;
+            /* background-color: lightgray; */
+        }
+        .googlegif{
+            width: 450px;
+            height: 290px;
+            /* user-drag: none; 
+            user-select: none; */
+        }
+        .section input{
+            width: 40%;
+            padding: 12px;
+            border-radius: 30px;
+            margin-top: -20px;
+            border: 1px solid lightgray;
+            font-size: 1rem;
+            padding-left: 45px;
+            padding-right: 100px;
+        }
+        .section input:focus{
+            outline: none;
+        }
+        .search{
+            height: 25px;
+            width: 25px;
+            margin-left: -500px;
+            margin-top: -35px;
+            cursor: pointer;
+         }
+         .voice{
+            height: 25px;
+            width: 25px;
+            margin-left: 400px;
+            margin-top: -25px;
+            cursor: pointer;
+            
+         }
+         .lens{
+            height: 25px;
+            width: 25px;
+            margin-left: 480px;
+            margin-top: -25px;
+            cursor: pointer;
+         }
+
+         /* This is Article */
+
+         .buttons{
+            grid-area: article;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+         }
+         .btn{
+            padding:8px 10px;
+            margin: 0px 10px;
+            background-color: #ECF0F1 ;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+         }
+         .googlelanguages{
+            grid-area: 'main';
+            text-align: center;
+            margin-top: 25px;
+         }
+         .googlelanguages span{
+            margin: 0px 3px;
+         }
+         span a{
+            text-decoration: none;
+            color: blue;
+            font-size: 13px;
+         }
+
+         /* This is Footer */
+
+         .ending{
+            grid-row: footer;
+            width: 100%;
+            height: 154px;
+            background-color: #ECF0F1;
+            margin-top: 25px;
+            grid-template-columns: 1fr 1fr;
+         }
+         .ending p{
+            padding: 20px;
+            font-size: 18px;
+            margin-top: 10px;
+         }
+         .startfooter{
+            display: flex;
+            flex-direction: column;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        .startfooter span{
+            width: 60%;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            text-align:start;
+            margin: 0px 3px;
+            font-size: 14px;
+        }
+        .startfooter span:hover{
+            text-decoration: underline;
+        }
+
+         .endfooter{
+            display: flex;
+            flex-direction: column;
+            display: inline-block;
+            width: 40%;
+            text-align: end;
+            float: right;
+            margin-top: 50px;
+         }
+         .endfooter span{
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 14px;
+         }
+         .endfooter span:hover{
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <!-- This is Header-->
+    <header class="header">
+            <a href="#" draggable="false" (dragstart)="false;">Gmail</a>
+            <a href="#" draggable="false" (dragstart)="false;">Images</a>
+            <a href="#"><img class="image color" draggable="false" (dragstart)="false;" src="icons8-circled-menu-50.png" alt="Google"></a>
+            <a href="#"><img class="image border" draggable="false" (dragstart)="false;" src="icons8-person-60.png" alt="Google"></a>
+        </header>
+        
+        
+    <!-- This is Section -->
+    <section class="section">
+        <img class="googlegif" draggable="false" (dragstart)="false;" src="google.gif" alt="Google">
+
+        <input type="text" draggable="false" (dragstart)="false;" placeholder="Search Google or Type a URL">
+
+        <img class="search" draggable="false" (dragstart)="false;" title="Search by Typing" src="search.png" alt="Google">
+
+        <img class="voice" draggable="false" (dragstart)="false;" title="Search by Vioce" src="google-voice.png" alt="Google">
+
+        <img class="lens" draggable="false" (dragstart)="false;" title="Search by Lens" src="lens_icon.svg" alt="Google">
+
+    </section>
+
+
+    <!-- This is the Article  -->
+    <article class="buttons">
+        <button class="btn">Google Search</button>
+        <button class="btn">I'm Feeling Lucky</button>
+    </article>
+
+
+
+    <!-- This is Main -->
+    <main class="googlelanguages">
+        <span>Google Offered In :</span> 
+        <span><a href="#">हिन्दी</a></span>
+        <span><a href="#">বাংলা</a></span>
+        <span><a href="#">తెలుగు</a></span>
+        <span><a href="#">मराठी</a></span>
+        <span><a href="#">தமிழ்</a></span>
+        <span><a href="#">ગુજરાતી</a></span>
+        <span><a href="#">ಕನ್ನಡ</a></span>
+        <span><a href="#">മലയാളം</a></span>
+        <span><a href="#">ਪੰਜਾਬੀ</a></span>
+    </main>
+
+
+    <!-- This is Footer -->
+    <footer class="ending">
+        <p>India</p><hr>
+        <div class="startfooter">
+            <span>About</span>
+            <span>Advertising</span>
+            <span>Business</span>
+            <span>How Search Works</span>
+        </div>
+        <div class="endfooter">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Services</span>
+        </div>
+    </footer>
+
+
+</body>
+</html>
